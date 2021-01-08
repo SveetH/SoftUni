@@ -1,0 +1,48 @@
+{% extends 'shared/site.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/detail-pet.css' %}">
+{% endblock %}
+
+{% block site_content %}
+    <div class="pet-image">
+        <img src="{{ pet.image_url }}" alt="image of {{ pet.name }}">
+    </div>
+    <div class="pet-info">
+        <h2>Type: {{ pet.type }}</h2>
+        <h2>Name: {{ pet.name }}</h2>
+        <h2>Age: {{ pet.age }}</h2>
+        <h3>{{ pet.description }}</h3>
+        <div>
+        <a href="{% url 'edit pet' pet.pk %}" class="btn btn-success">edit</a>
+        <a href="{% url 'delete pet' pet.pk %}" class="btn btn-danger">delete</a>
+            </div>
+        <a href="{% url 'like pet' pet.id %}"><i class="far fa-heart-o" aria-hidden="true"></i></a>
+        <h3>likes: {{ pet.likes_count }}</h3>
+    </div>
+    <div class="d-block" style="background-color: #e7e8e3; padding:2%">
+        {% if pet.comment_set.count > 0 %}
+            {% for comment in pet.comment_set.all %}
+            <div class="box">
+                <h5><em>{{ comment.text }}</em></h5>
+                <hr>
+            </div>
+
+            {% endfor %}
+        {% else %}
+            <div class="box">
+                <h3>There are no comments for this pet. </h3>
+            </div>
+
+      {% endif %}
+       <div class="box">
+            <form method="post" action="{% url 'pet det' pet.pk %}">
+                {{ comment_form }}
+                {% csrf_token %}
+                <button class="btn btn-primary mt-2" type="submit">Add comment</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

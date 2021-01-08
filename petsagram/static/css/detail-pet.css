@@ -1,0 +1,18 @@
+.pet-image {
+    padding-top: 18px;
+    padding-bottom: 8px;
+    padding-right: 40px;
+}
+
+.pet-info {
+
+    width: 40%;
+
+}
+
+img {
+    height: 350px;
+}
+.pet-info, .pet-image {
+    display: inline-block;
+}

@@ -1,0 +1,68 @@
+.list_horizontal .list_item {
+    display: inline-block;
+}
+
+section header {
+    border-bottom: 1px solid #515151;
+    margin: 15px 0;
+    padding: 10px 0;
+}
+
+.row {
+    display: flex;
+}
+
+.row .col {
+    flex: 50%;
+}
+.style-nav {
+    background-color: #F2F2F2;
+    height: 55px;
+}
+
+.style-nav .list_item{
+    padding: 15px 15px;
+    font-size: 1.2em;
+}
+
+.button {
+    border-radius: 3px;
+    padding: 5px 12px;
+    border-style: none;
+    color: #FCFCFC;
+    background-color: #606060;
+    border-color: #606060;
+    display: inline-block;
+}
+
+.button:hover {
+    color: #FCFCFC;
+    background-color: #4C4C4C;
+    border-color: #4C4C4C;
+}
+
+.banner {
+    height: 450px;
+
+    padding: 20px 20px 20px 20px;
+
+
+    background-color: #DADADA;
+
+}
+
+.banner:before {
+    background-image: url("https://activepets.co.za/web/ap-content/uploads/2019/08/Active-pets-dogs-and-cats.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    content: '';
+    height:  300px;
+
+}
+
+#root {
+  width: 1046px;
+    margin: 0 auto;
+
+}

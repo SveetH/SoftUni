@@ -1,0 +1,42 @@
+img {
+    width: 400px;
+    height: 400px;
+    border-radius: 4px;
+}
+
+.list-pets .list_item{
+    border: solid 1px dimgrey;
+
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.pet-info {
+    font-size: 1.2em;
+    font-weight: 460;
+}
+
+.pet-descr , .pet-info{
+    margin-top: 8px;
+
+}
+
+.pet-details {
+    padding: 6px;
+}
+
+.p-butt {
+    border-radius: 3px;
+    padding: 5px 12px;
+    border-style: none;
+    color: black;
+    background-color: beige;
+    border-color: beige;
+    display: inline-block;
+}
+
+.p-butt:hover {
+    color: black;
+    background-color: lightgray;
+    border-color: lightgray;
+}
