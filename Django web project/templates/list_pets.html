@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block site_content %}
+    <link rel="stylesheet" href="{% static 'css/list_pets.css' %}">
     <h1>All pets Photos</h1>
     <ul class="list_horizontal list-pets">
         {% for pet in pets %}
@@ -14,9 +15,8 @@
                 <div class="pet-details">
                     <p class="pet-info">{{ pet.type }}, {{ pet.name }} Age: {{ pet.age }}</p>
                     <p class="pet-descr">{{ pet.description }}</p>
-                    <p>-------</p>
-                    <div class="p-butt">
-                        <a href="/pets/details/{{ pet.id }}">{{ pet.name }}</a>
+                    <div class="">
+                        <a href="/pets/details/{{ pet.id }}" class="btn btn-lg btn-secondary">{{ pet.name }}</a>
                     </div>
                 </div>
             </li>
