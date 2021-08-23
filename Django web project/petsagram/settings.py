@@ -86,8 +86,8 @@ DATABASES = {
         'NAME': 'pets_db',
         'USER': 'postgres',
         'PASSWORD': 'your password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
