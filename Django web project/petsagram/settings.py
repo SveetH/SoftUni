@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'pets_db',
         'USER': 'postgres',
-        'PASSWORD': 'pedal505',
+        'PASSWORD': 'your password',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
